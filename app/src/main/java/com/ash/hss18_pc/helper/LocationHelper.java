@@ -20,7 +20,7 @@ public class LocationHelper {
         this.PinCode = PinCode;
     }
 
-    public void getLocationFromPinCodeIndia(Context con) {
+    public void getLocationFromPinCodeIndia(Context von) {
         AsyncHttpClient client = new AsyncHttpClient();
         client.get("http://getpincodes.info/api.php?pincode=" + PinCode, new AsyncHttpResponseHandler() {
 
@@ -35,11 +35,8 @@ public class LocationHelper {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
-
+//llll
             }
-
-
-
         });
     }
 
